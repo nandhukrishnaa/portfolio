@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandhukrishna B | Aerospace & Mechanical Structures Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f4c81;         /* Deep Sapphire Blue */
+            --accent: #2563eb;          /* Electric Indigo Accent */
+            --slate-900: #0f172a;       /* Dark Structural Background */
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-600: #475569;
+            --slate-100: #f1f5f9;
+            --slate-50: #f8fafc;
+            --border: #e2e8f0;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --shadow-md: 0 12px 30px -8px rgba(15, 76, 129, 0.08), 0 8px 16px -6px rgba(15, 76, 129, 0.03);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--slate-50);
+            color: var(--slate-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Fixed Navigation Header */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 32px;
+        }
+
+        .nav-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--slate-600);
+            font-weight: 600;
+            font-size: 0.92rem;
+            position: relative;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.2s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* 100vh IMMERSIVE IMPACT LANDING HERO */
+        .hero {
+            background: linear-gradient(145deg, #020617 0%, #071e3d 60%, var(--primary) 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 120px 32px;
+            overflow: hidden;
+        }
+
+        /* Blueprint Grid Micro-Overlay */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 950px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: calc(2.8rem + 2.2vw);
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            line-height: 1.05;
+            background: linear-gradient(to right, #ffffff 40%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p.tagline {
+            font-size: calc(1.1rem + 0.3vw);
+            color: var(--slate-400);
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto 44px auto;
+            line-height: 1.6;
+        }
+
+        /* SOCIAL CONNECT CONSOLE BUTTONS */
+        .interactive-logos {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 54px;
+            flex-wrap: wrap;
+        }
+
+        .logo-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .logo-btn:hover {
+            background: #ffffff;
+            color: var(--primary);
+            transform: translateY(-6px) scale(1.05);
+            border-color: #ffffff;
+            box-shadow: 0 20px 35px -10px rgba(37, 99, 235, 0.35);
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent) 0%, #1d4ed8 100%);
+            color: #ffffff;
+            padding: 16px 44px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.98rem;
+            letter-spacing: 0.3px;
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 30px -5px rgba(37, 99, 235, 0.5);
+        }
+
+        /* Dynamic Main Asymmetric Grid Workspaces */
+        .workspace-layout {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 120px 32px 60px 32px;
+            display: grid;
+            grid-template-columns: 2.15fr 1fr;
+            gap: 48px;
+        }
+
+        @media (max-width: 1024px) {
+            .workspace-layout {
+                grid-template-columns: 1fr;
+                padding: 90px 24px 40px 24px;
+            }
+        }
+
+        /* Premium Panels Base Layout */
+        .panel-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.45rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 32px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0;
+            width: 75px; height: 2px;
+            background: var(--accent);
+        }
+
+        /* Experience and Project Chronology Blocks */
+        .stream-block {
+            margin-bottom: 35px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stream-block:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .stream-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            gap: 20px;
+        }
+
+        .stream-heading {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            letter-spacing: -0.3px;
+        }
+
+        .stream-date {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            padding: 5px 14px;
+            border-radius: 30px;
+            white-space: nowrap;
+        }
+
+        .stream-subheading {
+            font-size: 0.98rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+
+        /* Skill & Technical Environment Badges Row */
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 18px;
+            align-items: center;
+        }
+
+        .badge-prefix {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-right: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-tag {
+            background: var(--slate-50);
+            color: var(--slate-700);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        /* Technical Execution Vectors Line Items */
+        .spec-list {
+            list-style: none;
+        }
+
+        .spec-list li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            font-size: 0.98rem;
+            color: var(--slate-700);
+            text-align: justify;
+        }
+
+        .spec-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Sidebar Competency Stack Configurations */
+        .sidebar-section {
+            margin-bottom: 26px;
+        }
+
+        .sidebar-section h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .matrix-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .matrix-token {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);
+            color: var(--primary);
+            border: 1px solid #bae6fd;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        /* Educational Identity Framework Card */
+        .edu-callout {
+            background: linear-gradient(to right, var(--slate-50), var(--slate-100));
+            padding: 22px;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 12px 12px 0;
+            margin-top: 15px;
+        }
+
+        /* HORIZONTAL TRACK DESIGN MODULE FOR MILESTONES (BOTTOM REPOSITION) */
+        .milestones-section {
+            background: #ffffff;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 90px 0;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .section-container-wide {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .milestones-title-wrapper {
+            margin-bottom: 45px;
+        }
+
+        .milestones-track-outer {
+            width: 100%;
+            overflow-x: auto;
+            padding: 20px 0 30px 0;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
+
+        .milestones-track-outer::-webkit-scrollbar {
+            height: 6px;
+        }
+        .milestones-track-outer::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 3px;
+        }
+
+        .milestones-horizontal-track {
+            display: flex;
+            position: relative;
+            min-width: 1100px;
+            justify-content: space-between;
+            padding-top: 30px;
+        }
+
+        /* Seamless Continuous Timeline Vector Axis Line */
+        .milestones-horizontal-track::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--border);
+            z-index: 1;
+        }
+
+        .horizontal-node {
+            flex: 1;
+            position: relative;
+            padding-right: 35px;
+            z-index: 2;
+        }
+
+        .horizontal-node:last-child {
+            padding-right: 0;
+        }
+
+        /* Interactive Timeline Node Bullet Axis Points */
+        .horizontal-node::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 4px solid var(--accent);
+            z-index: 3;
+            transition: var(--transition);
+        }
+
+        .horizontal-node:hover::before {
+            background: var(--accent);
+            transform: scale(1.3);
+            box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
+        }
+
+        .node-year {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 6px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .node-header-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            line-height: 1.3;
+            margin-bottom: 6px;
+            letter-spacing: -0.2px;
+        }
+
+        .node-details {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        footer {
+            background: var(--slate-900);
+            color: var(--slate-400);
+            text-align: center;
+            padding: 48px 24px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">NANDHUKRISHNA B</a>
+            <ul class="nav-links">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#milestones">Milestones</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>NANDHUKRISHNA B</h1>
+            <p class="tagline">Mechanical Engineering Undergraduate specialized in Structural Mechanics, Finite Element Analysis (FEA), and Static Aeroelasticity Frameworks.</p>
+            
+            <div class="interactive-logos">
+                <a href="https://linkedin.com/in/nandhukrishnab" class="logo-btn" title="LinkedIn Professional Network" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/nandhukrishna-b" class="logo-btn" title="GitHub Code Portfolio" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:nandhukrishna.xyz@gmail.com" class="logo-btn" title="Email Structural Inquiry">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <a href="tel:+916238604223" class="logo-btn" title="Direct Telephone Connection">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+            
+            <a href="#experience" class="hero-cta">View Workspace Matrix</a>
+        </div>
+    </section>
+
+    <div class="workspace-layout">
+        
+        <main>
+            
+            <div class="panel-card" id="experience">
+                <h3 class="section-title">Relevant Experience</h3>
+                
+                <div class="stream-block">
+                    <div class="stream-meta">
+                        <div class="stream-heading">Aeronautical Development Establishment (ADE), DRDO</div>
+                        <div class="stream-date">May 2025 – July 2025</div>
+                    </div>
+                    <div class="stream-subheading">Aeroelasticity Research Intern — Bengaluru, India</div>
+                    <div class="badge-row">
+                        <span class="badge-prefix">Tools:</span>
+                        <span class="badge-tag">MATLAB</span><span class="badge-tag">Python</span><span class="badge-tag">SolidWorks</span>
+                    </div>
+                    <ul class="spec-list">
+                        <li>Conducted end-to-end static aeroelastic analysis of a uniform straight wing, computing shear center and torsional rigidity (\(GJ \approx 3 \times 10^5 \text{ Nm}^2\)) to determine a divergence dynamic pressure of \(2600 \text{ Pa}\).</li>
+                        <li>Modelled spanwise twist distribution for a \(0 - 2.5\text{m}\) wingspan using MATLAB and simulated elliptical lift loading in Python.</li>
+                        <li>Documented governing equations, boundary conditions, and structural stability criteria in a formal technical report; presented analytical and simulation findings to senior DRDO scientists.</li>
+                    </ul>
+                </div>
+
+                <div class="stream-block">
+                    <div class="stream-meta">
+                        <div class="stream-heading">IDEATOR GEC, Thrissur</div>
+                        <div class="stream-date">Dec 2024 – Present</div>
+                    </div>
+                    <div class="stream-subheading">Mechanical Dept. Coordinator & Joint Treasurer — Thrissur, India</div>
+                    <div class="badge-row">
+                        <span class="badge-prefix">Skills:</span>
+                        <span class="badge-tag">Workshop Tools</span><span class="badge-tag">Procurement Management</span><span class="badge-tag">Budget Allocation</span>
+                    </div>
+                    <ul class="spec-list">
+                        <li>Led the mechanical engineering project pipeline and subsystem integration for the Autonomous Celestial Rover and PureScan IoT builds.</li>
+                        <li>Managed tool procurement, workshop hardware maintenance, and budget allocation as Joint Treasurer for a 40+ member technical club.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel-card" id="projects">
+                <h3 class="section-title">Technical Projects</h3>
+                
+                <div class="stream-block">
+                    <div class="stream-meta">
+                        <div class="stream-heading">UAV Development — SAE Drone Design Challenge 2026</div>
+                        <div class="stream-date">Team Hornets</div>
+                    </div>
+                    <div class="stream-subheading">All India Rank 3 (Design Report Category) & AIR 11 Overall</div>
+                    <div class="badge-row">
+                        <span class="badge-prefix">Software:</span>
+                        <span class="badge-tag">ANSYS FEA</span><span class="badge-tag">SolidWorks</span><span class="badge-tag">XFLR5</span>
+                    </div>
+                    <ul class="spec-list">
+                        <li>Secured All India Rank 11 Overall and All India Rank 3 in the Design Report category for a Micro Class UAV competing nationally.</li>
+                        <li>Performed comprehensive static and dynamic stability analysis; optimized wing internal structure layouts in ANSYS for weight compliance and validated aerodynamic performance in XFLR5.</li>
+                    </ul>
+                </div>
+
+                <div class="stream-block">
+                    <div class="stream-meta">
+                        <div class="stream-heading">PureScan IoT — Portable Milk Adulteration Analyzer</div>
+                        <div class="stream-date">Mar 2026 – Apr 2026</div>
+                    </div>
+                    <div class="stream-subheading">National Buildathon Finalist Blueprint</div>
+                    <div class="badge-row">
+                        <span class="badge-prefix">DFM Stack:</span>
+                        <span class="badge-tag">SolidWorks</span><span class="badge-tag">Cura</span><span class="badge-tag">FDM 3D Printing</span>
+                    </div>
+                    <ul class="spec-list">
+                        <li>Led the mechanical design of an injection-mold-ready enclosure for PureScan IoT, selected among the top 14 finalist teams out of 400+ entries at the Code2.0 Crypt Buildathon.</li>
+                        <li>Designed a robust mezzanine architecture featuring \(45\text{mm}\) elevated pillars, \(1.637^\circ\) draft angles, and \(0.2\text{mm}\) diametric tolerances for zero-adhesive OLED, USB-C, and hardware switch integration.</li>
+                    </ul>
+                </div>
+
+                <div class="stream-block">
+                    <div class="stream-meta">
+                        <div class="stream-heading">Autonomous Celestial Rover (IDEATOR Club)</div>
+                        <div class="stream-date">Sep 2024 – Feb 2026</div>
+                    </div>
+                    <div class="stream-subheading">Lightweight Framework Prototyping</div>
+                    <div class="badge-row">
+                        <span class="badge-prefix">Stack:</span>
+                        <span class="badge-tag">SolidWorks</span><span class="badge-tag">Cura</span><span class="badge-tag">Testing Cycles</span>
+                    </div>
+                    <ul class="spec-list">
+                        <li>Designed a lightweight aluminum-profile chassis integrated with custom 3D-printed structural joints.</li>
+                        <li>Validated mechanical structural stability and ground mobility configurations through multiple practical hardware testing cycles.</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            
+            <div class="panel-card" id="skills">
+                <h3 class="section-title" style="font-size: 1.15rem; margin-bottom: 20px;">Skills Matrix</h3>
+                
+                <div class="sidebar-section">
+                    <h4>CAE & Simulation</h4>
+                    <div class="matrix-container">
+                        <span class="matrix-token">ANSYS FEA</span>
+                        <span class="matrix-token">Structural Analysis</span>
+                        <span class="matrix-token">Static Aeroelasticity</span>
+                        <span class="matrix-token">XFLR5</span>
+                        <span class="matrix-token">SolidWorks</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section" style="margin-top: 18px;">
+                    <h4>Programming & Math</h4>
+                    <div class="matrix-container">
+                        <span class="matrix-token">MATLAB</span>
+                        <span class="matrix-token">Python</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section" style="margin-top: 18px;">
+                    <h4>Manufacturing</h4>
+                    <div class="matrix-container">
+                        <span class="matrix-token">FDM 3D Printing</span>
+                        <span class="matrix-token">Injection-Mold DFM</span>
+                        <span class="matrix-token">GD&T</span>
+                        <span class="matrix-token">Prototyping</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-card" id="education">
+                <h3 class="section-title" style="font-size: 1.15rem; margin-bottom: 20px;">Education</h3>
+                <div class="stream-heading" style="font-size: 1rem;">Government Engineering College, Thrissur</div>
+                <div style="font-size: 0.9rem; font-weight: 500; margin-top: 2px;">B.Tech in Mechanical Engineering</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">APJ Abdul Kalam Technological University</div>
+                <div class="stream-date" style="display: inline-block; font-size: 0.8rem; padding: 2px 10px; margin-bottom: 10px;">Sep 2023 – May 2027</div>
+                
+                <div class="edu-callout">
+                    <strong style="font-size: 1rem; color: var(--primary);">CGPA: 8.90 / 10.0</strong>
+                    <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">Ranked in the top 5 of the mechanical engineering batch.</div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <section class="milestones-section" id="milestones">
+        <div class="section-container-wide">
+            <div class="milestones-title-wrapper">
+                <h3 class="section-title" style="margin-bottom: 0;">Key Milestones</h3>
+            </div>
+            
+            <div class="milestones-track-outer">
+                <div class="milestones-horizontal-track">
+                    
+                    <div class="horizontal-node">
+                        <span class="node-year">Oct 2023</span>
+                        <div class="node-header-text">Simulation Workshop</div>
+                        <p class="node-details">ANSYS Professional Simulation Workshop, Tathva '23, NIT Calicut.</p>
+                    </div>
+
+                    <div class="horizontal-node">
+                        <span class="node-year">Sep 2024</span>
+                        <div class="node-header-text">Robotics Mastery</div>
+                        <p class="node-details">Introduction to Robotics, NPTEL — IIT Kharagpur (Final Score: 81%).</p>
+                    </div>
+
+                    <div class="horizontal-node">
+                        <span class="node-year">Jul 2025</span>
+                        <div class="node-header-text">DRDO Research Intern</div>
+                        <p class="node-details">Aeroelasticity Research Intern Certificate, Aeronautical Development Establishment (ADE).</p>
+                    </div>
+
+                    <div class="horizontal-node">
+                        <span class="node-year">Feb 2026</span>
+                        <div class="node-header-text">All India Rank 3</div>
+                        <p class="node-details">Design Report Category, SAE Drone Design Challenge (Team Hornets) — AIR 11 Overall.</p>
+                    </div>
+
+                    <div class="horizontal-node">
+                        <span class="node-year">Apr 2026</span>
+                        <div class="node-header-text">National Finalist</div>
+                        <p class="node-details">Code2.0 Crypt Buildathon (Selected among top 14 finalist teams out of 400+ participants).</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Nandhukrishna B. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

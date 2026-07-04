@@ -40,7 +40,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        
         nav {
             position: fixed;
             top: 0;
@@ -116,7 +115,6 @@
             }
         }
 
-        /* 100vh IMMERSIVE IMPACT LANDING HERO */
         .hero {
             background: linear-gradient(145deg, var(--slate-900) 0%, #071e3d 60%, var(--primary) 100%);
             color: #ffffff;
@@ -131,7 +129,6 @@
             overflow: hidden;
         }
 
-        /* Blueprint Grid Micro-Overlay */
         .hero::before {
             content: '';
             position: absolute;
@@ -164,14 +161,13 @@
 
         .hero p.tagline {
             font-size: calc(1.05rem + 0.3vw);
-            color: var(--slate-400);
+            color: #94a3b8;
             font-weight: 400;
             max-width: 800px;
             margin: 0 auto 44px auto;
             line-height: 1.6;
         }
 
-        /* SOCIAL CONNECT CONSOLE BUTTONS */
         .interactive-logos {
             display: flex;
             justify-content: center;
@@ -222,7 +218,6 @@
             box-shadow: 0 18px 30px -5px rgba(37, 99, 235, 0.5);
         }
 
-        /* Dynamic Main Asymmetric Grid Workspaces */
         .workspace-layout {
             max-width: 1300px;
             margin: 0 auto;
@@ -240,9 +235,8 @@
             }
         }
 
-        /* Premium Panels Base Layout */
         .panel-card {
-            background: var(--bg-card);
+            background: #ffffff;
             border: 1px solid var(--border);
             border-radius: var(--radius-md);
             padding: 40px;
@@ -278,7 +272,6 @@
             background: var(--accent);
         }
 
-        /* Experience and Project Chronology Blocks */
         .stream-block {
             margin-bottom: 35px;
             padding-bottom: 32px;
@@ -328,12 +321,11 @@
         .stream-subheading {
             font-size: 0.98rem;
             font-style: italic;
-            color: var(--text-muted);
+            color: var(--slate-600);
             margin-bottom: 14px;
             font-weight: 500;
         }
 
-        /* Skill & Technical Environment Badges Row */
         .badge-row {
             display: flex;
             flex-wrap: wrap;
@@ -345,7 +337,7 @@
         .badge-prefix {
             font-size: 0.75rem;
             font-weight: 700;
-            color: var(--text-muted);
+            color: var(--slate-600);
             text-transform: uppercase;
             margin-right: 6px;
             letter-spacing: 0.5px;
@@ -361,7 +353,6 @@
             border: 1px solid var(--border);
         }
 
-        /* Technical Execution Vectors Line Items */
         .spec-list {
             list-style: none;
         }
@@ -383,7 +374,6 @@
             font-weight: bold;
         }
 
-        /* High-Fidelity Sidebar Grid Cards for Skills Matrix */
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -443,7 +433,6 @@
             border-color: #bae6fd;
         }
 
-        /* Educational Identity Framework Card */
         .edu-callout {
             background: linear-gradient(to right, var(--slate-50), var(--slate-100));
             padding: 22px;
@@ -452,7 +441,13 @@
             margin-top: 15px;
         }
 
-        /* HIGH-FIDELITY HORIZONTAL TIMELINE MATRIX FOR MILESTONES (FIXED CLIPPING) */
+        .edu-gpa {
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 6px;
+            font-size: 0.95rem;
+        }
+
         .milestones-section {
             background: linear-gradient(180deg, #ffffff 0%, var(--slate-50) 100%);
             border-top: 1px solid var(--border);
@@ -474,7 +469,7 @@
         }
 
         .milestones-title-wrapper p {
-            color: var(--text-muted);
+            color: var(--slate-600);
             font-size: 1rem;
             margin-top: 4px;
         }
@@ -482,7 +477,7 @@
         .milestones-track-outer {
             width: 100%;
             overflow-x: auto;
-            padding: 50px 0 30px 0; /* Expanded top padding from 40px to 50px to provide structural safety clearance */
+            padding: 50px 0 30px 0;
             scrollbar-width: thin;
             scrollbar-color: var(--primary) transparent;
         }
@@ -502,7 +497,6 @@
             justify-content: space-between;
         }
 
-        /* Seamless Continuous Solid Axis Line with Gradient Glow */
         .milestones-horizontal-track::before {
             content: '';
             position: absolute;
@@ -530,11 +524,10 @@
         .horizontal-node:first-child { margin-left: 0; }
         .horizontal-node:last-child { margin-right: 0; padding-right: 24px; }
 
-        /* Glowing Axis Pulsate Points (Fixed clipping loop by shifting coordinate space metrics) */
         .horizontal-node::before {
             content: '';
             position: absolute;
-            top: -28px; /* Adjusted downward from -49px to sit completely free inside the scroller bounding container */
+            top: -28px;
             left: 24px;
             width: 14px;
             height: 14px;
@@ -582,14 +575,14 @@
 
         .node-details {
             font-size: 0.86rem;
-            color: var(--text-muted);
+            color: var(--slate-600);
             line-height: 1.5;
             text-align: left;
         }
 
         footer {
             background: var(--slate-900);
-            color: var(--slate-400);
+            color: #94a3b8;
             text-align: center;
             padding: 48px 24px;
             font-size: 0.9rem;
@@ -613,7 +606,7 @@
     <section class="hero">
         <div class="hero-container">
             <h1>NANDHUKRISHNA B</h1>
-            <p class="tagline">Mechanical Engineering Undergraduate specialized in Structural Mechanics, Finite Element Analysis (FEA), and Static Aeroelasticity Frameworks.</p>
+            <p class="tagline">Mechanical Engineering Undergraduate specialized in Structural Mechanics, Static Aeroelasticity, Finite Element Analysis (FEA), and UAV Product Development.</p>
             
             <div class="interactive-logos">
                 <a href="https://linkedin.com/in/nandhukrishnab" class="logo-btn" title="LinkedIn Professional Network" target="_blank">
@@ -622,7 +615,7 @@
                 <a href="https://github.com/nandhukrishnaa" class="logo-btn" title="GitHub Code Portfolio" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:nandhukrishna.xyz@gmail.com" class="logo-btn" title="Email Structural Inquiry">
+                <a href="mailto:nandhukrishna.xyz@gmail.com" class="logo-btn" title="Email Engineering Inquiry">
                     <i class="far fa-envelope"></i>
                 </a>
                 <a href="tel:+916238604223" class="logo-btn" title="Direct Telephone Connection">
@@ -637,211 +630,22 @@
     <div class="workspace-layout">
         
         <main>
-            
             <div class="panel-card" id="experience">
                 <h3 class="section-title">Relevant Experience</h3>
                 
                 <div class="stream-block">
                     <div class="stream-meta">
                         <div class="stream-heading">Aeronautical Development Establishment (ADE), DRDO</div>
-                        <div class="stream-date">May 2025 – July 2025</div>
+                        <div class="stream-date">May 2025 – Jul 2025</div>
                     </div>
                     <div class="stream-subheading">Aeroelasticity Research Intern — Bengaluru, India</div>
                     <div class="badge-row">
                         <span class="badge-prefix">Tools:</span>
-                        <span class="badge-tag">MATLAB</span><span class="badge-tag">Python</span><span class="badge-tag">SolidWorks</span>
+                        <span class="badge-tag">MATLAB</span>
+                        <span class="badge-tag">Python</span>
+                        <span class="badge-tag">SolidWorks</span>
                     </div>
                     <ul class="spec-list">
-                        <li>Conducted end-to-end static aeroelastic analysis of a uniform straight wing, computing shear center and torsional rigidity (<i>GJ</i> &asymp; 3 &times; 10<sup>5</sup> Nm<sup>2</sup>) to determine a divergence dynamic pressure of 2600 Pa.</li>
-                        <li>Modelled spanwise twist distribution across a 0-2.5m wingspan in MATLAB and simulated elliptical lift loading in Python.</li>
-                        <li>Presented static aeroelastic analytical findings to senior DRDO scientists and documented governing equations, boundary conditions, and structural stability criteria in a formal technical report submitted to ADE.</li>
-                        <li>Internship scope assessed by guide as covering approximately 3/4 of a postgraduate aerospace structures module.</li>
-                    </ul>
-                </div>
-
-                <div class="stream-block">
-                    <div class="stream-meta">
-                        <div class="stream-heading">IDEATOR GEC, Thrissur</div>
-                        <div class="stream-date">Dec 2024 – Present</div>
-                    </div>
-                    <div class="stream-subheading">Mechanical Dept. Coordinator & Joint Treasurer — Thrissur, India</div>
-                    <div class="badge-row">
-                        <span class="badge-prefix">Skills:</span>
-                        <span class="badge-tag">Workshop Tools</span><span class="badge-tag">Procurement Management</span><span class="badge-tag">Budget Allocation</span>
-                    </div>
-                    <ul class="spec-list">
-                        <li>Coordinated mechanical subsystem integration across Autonomous Celestial Rover and PureScan IoT builds as Mechanical Dept. Coordinator.</li>
-                        <li>Managed tool procurement, workshop hardware maintenance, and budget allocation as Joint Treasurer for a 40+ member technical engineering club.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="panel-card" id="projects">
-                <h3 class="section-title">Technical Projects</h3>
-                
-                <div class="stream-block">
-                    <div class="stream-meta">
-                        <div class="stream-heading">UAV Development — SAE Drone Design Challenge 2026</div>
-                        <div class="stream-date">Team Hornets</div>
-                    </div>
-                    <div class="stream-subheading">All India Rank 3 (Design Report Category) & AIR 11 Overall</div>
-                    <div class="badge-row">
-                        <span class="badge-prefix">Software:</span>
-                        <span class="badge-tag">ANSYS FEA</span><span class="badge-tag">SolidWorks</span><span class="badge-tag">XFLR5</span>
-                    </div>
-                    <ul class="spec-list">
-                        <li>Secured All India Rank 11 Overall and All India Rank 3 in the Design Report category for a Micro Class UAV competing nationally.</li>
-                        <li>Performed comprehensive static and dynamic stability analysis; optimized wing internal structure layouts in ANSYS for weight compliance and validated aerodynamic performance in XFLR5.</li>
-                    </ul>
-                </div>
-
-                <div class="stream-block">
-                    <div class="stream-meta">
-                        <div class="stream-heading">PureScan IoT — Portable Milk Adulteration Analyzer</div>
-                        <div class="stream-date">Mar 2026 – Apr 2026</div>
-                    </div>
-                    <div class="stream-subheading">National Buildathon Finalist Blueprint</div>
-                    <div class="badge-row">
-                        <span class="badge-prefix">DFM Stack:</span>
-                        <span class="badge-tag">SolidWorks</span><span class="badge-tag">Cura</span><span class="badge-tag">FDM 3D Printing</span>
-                    </div>
-                    <ul class="spec-list">
-                        <li>Led the mechanical design of an injection-mold-ready enclosure for PureScan IoT, selected among the top 14 finalist teams out of 400+ entries at the Code2.0 Crypt Buildathon.</li>
-                        <li>Designed a robust mezzanine architecture featuring 45mm elevated pillars, 1.637&deg; draft angles, and 0.2mm diametric tolerances for zero-adhesive OLED, USB-C, and hardware switch integration.</li>
-                    </ul>
-                </div>
-
-                <div class="stream-block">
-                    <div class="stream-meta">
-                        <div class="stream-heading">Autonomous Celestial Rover</div>
-                        <div class="stream-date">Sep 2024 – Feb 2026</div>
-                    </div>
-                    <div class="stream-subheading">Lightweight Framework Prototyping</div>
-                    <div class="badge-row">
-                        <span class="badge-prefix">Stack:</span>
-                        <span class="badge-tag">SolidWorks</span><span class="badge-tag">Cura</span><span class="badge-tag">Testing Cycles</span>
-                    </div>
-                    <ul class="spec-list">
-                        <li>Designed a lightweight aluminum-profile chassis integrated with custom 3D-printed structural joints.</li>
-                        <li>Validated mechanical structural stability and ground mobility configurations through multiple practical hardware testing cycles.</li>
-                    </ul>
-                </div>
-            </div>
-        </main>
-
-        <aside>
-            
-            <div class="panel-card" id="skills">
-                <h3 class="section-title">Skills Matrix</h3>
-                <div class="skills-grid">
-                    
-                    <div class="skill-category-card">
-                        <h4><i class="fas fa-chart-line"></i> CAE & Simulation</h4>
-                        <div class="matrix-container">
-                            <span class="matrix-token">ANSYS (FEA)</span>
-                            <span class="matrix-token">Structural Analysis</span>
-                            <span class="matrix-token">Static Aeroelasticity</span>
-                            <span class="matrix-token">XFLR5</span>
-                            <span class="matrix-token">SolidWorks</span>
-                            <span class="matrix-token">Finite Element Analysis</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category-card">
-                        <h4><i class="fas fa-code"></i> Programming & Math</h4>
-                        <div class="matrix-container">
-                            <span class="matrix-token">MATLAB</span>
-                            <span class="matrix-token">Python</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category-card">
-                        <h4><i class="fas fa-tools"></i> Manufacturing</h4>
-                        <div class="matrix-container">
-                            <span class="matrix-token">FDM 3D Printing</span>
-                            <span class="matrix-token">PLA/TPU Processing</span>
-                            <span class="matrix-token">Injection-Mold DFM</span>
-                            <span class="matrix-token">GD&T</span>
-                            <span class="matrix-token">Mechanical Prototyping</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category-card">
-                        <h4><i class="fas fa-fighter-jet"></i> Aerospace Systems</h4>
-                        <div class="matrix-container">
-                            <span class="matrix-token">Aerodynamics</span>
-                            <span class="matrix-token">Fluid Mechanics</span>
-                            <span class="matrix-token">Torsional Rigidity</span>
-                            <span class="matrix-token">UAV Integration</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="panel-card" id="education">
-                <h3 class="section-title">Education</h3>
-                <div class="stream-heading" style="font-size: 1rem;">Government Engineering College, Thrissur</div>
-                <div style="font-size: 0.9rem; font-weight: 500; margin-top: 2px;">B.Tech in Mechanical Engineering</div>
-                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">APJ Abdul Kalam Technological University</div>
-                <div class="stream-date" style="display: inline-block; font-size: 0.8rem; padding: 2px 10px; margin-bottom: 10px;">Sep 2023 – May 2027</div>
-                
-                <div class="edu-callout">
-                    <strong style="font-size: 1rem; color: var(--primary);">CGPA: 8.90 / 10.0</strong>
-                    <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">Ranked in the top 5 in a batch of 150 students.</div>
-                </div>
-            </div>
-        </aside>
-    </div>
-
-    <section class="milestones-section" id="milestones">
-        <div class="section-container-wide">
-            <div class="milestones-title-wrapper">
-                <h3 class="section-title" style="margin-bottom: 0;">Key Milestones</h3>
-                <p>A chronological timeline of verified technical milestones, research intern posts, and competitive national ranks.</p>
-            </div>
-            
-            <div class="milestones-track-outer">
-                <div class="milestones-horizontal-track">
-                    
-                    <div class="horizontal-node">
-                        <span class="node-year">Oct 2023</span>
-                        <div class="node-header-text">Simulation Certification</div>
-                        <p class="node-details">ANSYS Professional Simulation Workshop, Tathva '23, NIT Calicut.</p>
-                    </div>
-
-                    <div class="horizontal-node">
-                        <span class="node-year">Sep 2024</span>
-                        <div class="node-header-text">Robotics Mastery</div>
-                        <p class="node-details">Introduction to Robotics, NPTEL — IIT Kharagpur (Final Validation Score: 81%).</p>
-                    </div>
-
-                    <div class="horizontal-node">
-                        <span class="node-year">Jul 2025</span>
-                        <div class="node-header-text">DRDO Research Intern</div>
-                        <p class="node-details">Aeroelasticity Research Intern Certificate, Aeronautical Development Establishment (ADE).</p>
-                    </div>
-
-                    <div class="horizontal-node">
-                        <span class="node-year">Feb 2026</span>
-                        <div class="node-header-text">All India Rank 3</div>
-                        <p class="node-details">Design Report Category, SAE Drone Design Challenge (Team Hornets) — AIR 11 Overall.</p>
-                    </div>
-
-                    <div class="horizontal-node">
-                        <span class="node-year">Apr 2026</span>
-                        <div class="node-header-text">National Finalist</div>
-                        <p class="node-details">Code2.0 Crypt Buildathon (Selected among top 14 finalist teams out of 400+ participants).</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Nandhukrishna B. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+                        <li>Presented end-to-end static aeroelastic analysis of a uniform straight wing to senior DRDO scientists; submitted a formal technical report covering governing equations, boundary conditions, and structural stability criteria.</li>
+                        <li>Computed shear center, polar moment of inertia (SolidWorks), and torsional rigidity (GJ ≈ 3 × 10⁵ Nm²) to determine a divergence dynamic pressure threshold of 2600 Pa for the analyzed wing configuration.</li>
+                        <li>Modelled spanwise twist distribution across a 0–
